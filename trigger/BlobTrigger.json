@@ -1,0 +1,25 @@
+{
+	"name": "BlobTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "containertrigger",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/chum/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/6b6f4fa5-265b-4123-817e-6709c436d834/resourceGroups/fink-resouce-grp/providers/Microsoft.Storage/storageAccounts/finkdatalake",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

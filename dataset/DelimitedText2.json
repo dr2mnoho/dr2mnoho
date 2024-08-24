@@ -1,0 +1,117 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "csv",
+				"fileSystem": "datalake"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Address Street",
+				"type": "String"
+			},
+			{
+				"name": "Address City",
+				"type": "String"
+			},
+			{
+				"name": "Address Postcode",
+				"type": "String"
+			},
+			{
+				"name": "Age (Years)",
+				"type": "String"
+			},
+			{
+				"name": "Distance Commuted to Work (miles)",
+				"type": "String"
+			},
+			{
+				"name": "Employer Company",
+				"type": "String"
+			},
+			{
+				"name": "Credit Card Start Date",
+				"type": "String"
+			},
+			{
+				"name": "Credit Card Expiry Date",
+				"type": "String"
+			},
+			{
+				"name": "Credit Card Number",
+				"type": "String"
+			},
+			{
+				"name": "Credit Card CVV",
+				"type": "String"
+			},
+			{
+				"name": "Dependants",
+				"type": "String"
+			},
+			{
+				"name": "First Name",
+				"type": "String"
+			},
+			{
+				"name": "Bank IBAN",
+				"type": "String"
+			},
+			{
+				"name": "Last Name",
+				"type": "String"
+			},
+			{
+				"name": "Marital Status",
+				"type": "String"
+			},
+			{
+				"name": "Yearly Pension (£)",
+				"type": "String"
+			},
+			{
+				"name": "Retired",
+				"type": "String"
+			},
+			{
+				"name": "Yearly Salary (£)",
+				"type": "String"
+			},
+			{
+				"name": "Sex",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Make",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Model",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Year",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Type",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

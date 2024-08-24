@@ -1,0 +1,36 @@
+{
+	"name": "AzureSqlTable3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ParamAzureSqlService",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"dbName": "finksqlappdb",
+				"userName": "sqladmin",
+				"passowrd": "!Charlie123"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "description",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Addr"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

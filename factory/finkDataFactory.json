@@ -1,0 +1,9 @@
+{
+	"name": "finkDataFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3b3e1df4-47ce-4873-802b-7f0eb3eb777b",
+		"tenantId": "9236657f-583b-460c-8916-cb5e1ca60d73"
+	}
+}

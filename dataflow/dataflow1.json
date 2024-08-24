@@ -1,0 +1,43 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ParquetFromtbls",
+						"type": "DatasetReference"
+					},
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "AzureBlobStorage1",
+						"type": "LinkedServiceReference"
+					}
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     query: 'SELECT [ProductID]\\n      ,prod.[Name] as ProductName      \\n      ,prod.[ProductCategoryID]\\n      ,prod.[ProductModelID]\\n      productModelId,\\n      pm.Name as ProductModelName,\\n        pc.name as ProdCategoryName\\n  FROM [SalesLT].[Product] prod \\n  left join SalesLT.ProductModel pm on pm.ProductModelID = prod.ProductModelID\\n  left join SalesLT.ProductCategory pc on pc.ProductCategoryID = prod.ProductCategoryID\\n  where prod.ProductModelID is not null',",
+				"     format: 'query') ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'parquet',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}
