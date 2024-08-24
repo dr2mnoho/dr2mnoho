@@ -1,0 +1,102 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "finkDataFactory"
+		},
+		"AddrLinkedSrv_password": {
+			"value": ""
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"lnk_srv_watermark_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_password": {
+			"value": ""
+		},
+		"AddrLinkedSrv_properties_typeProperties_server": {
+			"value": "finksqldbserver.database.windows.net"
+		},
+		"AddrLinkedSrv_properties_typeProperties_database": {
+			"value": "finksqlappdb"
+		},
+		"AddrLinkedSrv_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://finkdatalake.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://finkdatalake.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "finksqldbserver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "finksqlappdb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "finksqldbserver.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "finksqlappdb"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"ParamAzureSqlService_properties_typeProperties_server": {
+			"value": "finksqldbserver.database.windows.net"
+		},
+		"ParamAzureSqlService_properties_typeProperties_database": {
+			"value": "@{linkedService().dbName}"
+		},
+		"ParamAzureSqlService_properties_typeProperties_userName": {
+			"value": "@{linkedService().userName}"
+		},
+		"lnk_srv_watermark_properties_typeProperties_server": {
+			"value": "finksqldbserver.database.windows.net"
+		},
+		"lnk_srv_watermark_properties_typeProperties_database": {
+			"value": "finksqlappdb"
+		},
+		"lnk_srv_watermark_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"BlobTrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/6b6f4fa5-265b-4123-817e-6709c436d834/resourceGroups/fink-resouce-grp/providers/Microsoft.Storage/storageAccounts/finkdatalake"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_server": {
+			"value": "finksqldbserver.database.windows.net"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_database": {
+			"value": "finksqlappdb"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
